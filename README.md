@@ -3,6 +3,7 @@
 [![Github pull requests](https://img.shields.io/github/issues-pr/SKS2024SE/SE_2024)](https://github.com/SKS2024SE/SE_2024/pulls)
 [![Workflow Testing](https://github.com/SKS2024SE/SE_2024/actions/workflows/python-app.yml/badge.svg)](https://github.com/SKS2024SE/SE_2024/actions/workflows/python-app.yml)
 
+![Coverage Badge](https://github.com/SKS2024SE/SE_2024/raw/sanjaey/tests/coverage-badge.svg)
 
 # Triad Triumph 
 [CSC 510 - Software Engineering 2024](https://txt.github.io/se24fall/index.html) <br>
