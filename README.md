@@ -1,6 +1,8 @@
  ![GitHub Org's stars](https://img.shields.io/github/stars/SKS2024SE) ![Static Badge](https://img.shields.io/badge/License-MIT-green?style=flat) ![Static Badge](https://img.shields.io/badge/Language-Python-blue?style=flat&logo=python) ![Static Badge](https://img.shields.io/badge/Platform-Linux-green?style=flat&logo=linux)
-
+[![Github closes issues](https://img.shields.io/github/issues-closed-raw/SKS2024SE/SE_2024)](https://github.com/SKS2024SE/SE_2024/issues?q=is%3Aissue+is%3Aclosed)
+[![Github pull requests](https://img.shields.io/github/issues-pr/SKS2024SE/SE_2024)](https://github.com/SKS2024SE/SE_2024/pulls)
 [![Workflow Testing](https://github.com/SKS2024SE/SE_2024/actions/workflows/python-app.yml/badge.svg)](https://github.com/SKS2024SE/SE_2024/actions/workflows/python-app.yml)
+
 
 # Triad Triumph 
 [CSC 510 - Software Engineering 2024](https://txt.github.io/se24fall/index.html) <br>
