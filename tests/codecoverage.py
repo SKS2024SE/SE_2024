@@ -33,8 +33,8 @@ def generate_badge(coverage, output_path="coverage-badge.svg"):
         <stop offset="1" stop-opacity=".1"/>
     </linearGradient>
     <rect rx="3" width="100" height="20" fill="#555"/>
-    <rect rx="3" x="45" width="55" height="20" fill="#4c1"/> <!-- Bright green color -->
-    <path fill="{color}" d="M45 0h5v20h-5z"/> <!-- Bright green color -->
+    <rect rx="3" x="45" width="55" height="20" fill="#4c1"/> 
+    <path fill="{color}" d="M45 0h5v20h-5z"/> 
     <rect rx="3" width="100" height="20" fill="url(#a)"/>
     <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="11">
         <text x="23" y="15" fill="#010101" fill-opacity="0">coverage</text>
