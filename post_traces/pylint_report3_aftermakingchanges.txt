@@ -1,0 +1,19 @@
+************* Module hw2_debugging
+HW2/hw2_debugging.py:4:0: C0116: Missing function or method docstring (missing-function-docstring)
+HW2/hw2_debugging.py:5:4: C0103: Variable name "leftIndex" doesn't conform to snake_case naming style (invalid-name)
+HW2/hw2_debugging.py:6:4: C0103: Variable name "rightIndex" doesn't conform to snake_case naming style (invalid-name)
+HW2/hw2_debugging.py:7:4: C0103: Variable name "mergeArr" doesn't conform to snake_case naming style (invalid-name)
+HW2/hw2_debugging.py:10:12: C0103: Variable name "rightIndex" doesn't conform to snake_case naming style (invalid-name)
+HW2/hw2_debugging.py:13:12: C0103: Variable name "leftIndex" doesn't conform to snake_case naming style (invalid-name)
+HW2/hw2_debugging.py:25:0: C0116: Missing function or method docstring (missing-function-docstring)
+HW2/hw2_debugging.py:25:0: C0103: Function name "mergeSort" doesn't conform to snake_case naming style (invalid-name)
+HW2/hw2_debugging.py:25:14: W0621: Redefining name 'arr' from outer scope (line 36) (redefined-outer-name)
+************* Module rand
+HW2/rand.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+HW2/rand.py:5:0: C0116: Missing function or method docstring (missing-function-docstring)
+HW2/rand.py:7:4: C0200: Consider using enumerate instead of iterating with range and len (consider-using-enumerate)
+HW2/rand.py:8:23: W1510: 'subprocess.run' used without explicitly defining the value for 'check'. (subprocess-run-check)
+
+------------------------------------------------------------------
+Your code has been rated at 5.81/10 (previous run: 5.48/10, +0.32)
+
