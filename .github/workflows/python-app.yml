@@ -39,6 +39,9 @@ jobs:
       run: |
         mkdir -p test-results/pylint
         pylint src > test-results/pylint/pylint-results-${{ matrix.python-version }}.txt
+    - name: Run autopep8
+      run: |
+          autopep8 --in-place --aggressive --aggressive src
 
     - name: Upload Linter results 
       uses: actions/upload-artifact@v4
