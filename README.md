@@ -5,11 +5,7 @@
 
 ![Coverage Badge](https://github.com/SKS2024SE/SE_2024/raw/sanjaey/tests/coverage-badge.svg)
 
-![autopep8](https://img.shields.io/badge/code%20style-autopep8-blue)
-
-![flake8](https://img.shields.io/badge/lint-flake8-yellow)
-
-![pylint](https://img.shields.io/badge/lint-pylint-brightgreen)
+![autopep8](https://img.shields.io/badge/code%20style-autopep8-blue) ![flake8](https://img.shields.io/badge/lint-flake8-yellow) ![pylint](https://img.shields.io/badge/lint-pylint-brightgreen)
 
 
 # Triad Triumph 
