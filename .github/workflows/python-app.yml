@@ -35,18 +35,10 @@ jobs:
       run: |
         mkdir -p test-results/linter
         flake8 src --count --exit-zero --max-complexity=10 --max-line-length=127 --select=E9,F63,F7 --show-source --statistics > test-results/linter/linter-results-${{matrix.python-version}}.txt
-
     - name: Run pylint
       run: |
-        pylint src > post_traces/pylint_results.txt 2>&1
-
-    - name: Upload Pylint results
-      uses: actions/upload-artifact@v4
-      with:
-          name: Pylint Results
-          path: post_traces/pylint_results.txt
-
-  if: ${{ always() }}
+        mkdir -p test-results/pylint
+        pylint src > test-results/pylint/pylint-results-${{ matrix.python-version }}.txt
 
     - name: Upload Linter results 
       uses: actions/upload-artifact@v4
@@ -62,4 +54,10 @@ jobs:
       with:
         name: Pytest Results for ${{ matrix.python-version }}
         path: test-results/junit/junit-results-${{ matrix.python-version }}.xml
+      if: ${{ always() }}
+    - name: Upload Pylint results
+      uses: actions/upload-artifact@v4
+      with:
+        name: Pylint Results for ${{ matrix.python-version }}
+        path: test-results/pylint/pylint-results-${{ matrix.python-version }}.txt
       if: ${{ always() }}
