@@ -5,6 +5,13 @@
 
 ![Coverage Badge](https://github.com/SKS2024SE/SE_2024/raw/sanjaey/tests/coverage-badge.svg)
 
+![autopep8](https://img.shields.io/badge/code%20style-autopep8-blue)
+
+![flake8](https://img.shields.io/badge/lint-flake8-yellow)
+
+![pylint](https://img.shields.io/badge/lint-pylint-brightgreen)
+
+
 # Triad Triumph 
 [CSC 510 - Software Engineering 2024](https://txt.github.io/se24fall/index.html) <br>
 We are a group of 3 whose names start with S - Success. Hence, Triad Triumph - just like the alliteration in our names.
