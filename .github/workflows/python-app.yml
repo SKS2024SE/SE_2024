@@ -38,7 +38,7 @@ jobs:
 
     - name: Run pylint
       run: |
-      pylint src > post_traces/pylint_results.txt 2>&1
+        pylint src > post_traces/pylint_results.txt 2>&1
 
     - name: Upload Pylint results
       uses: actions/upload-artifact@v4
