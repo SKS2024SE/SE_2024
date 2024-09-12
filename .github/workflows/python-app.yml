@@ -35,17 +35,15 @@ jobs:
       run: |
         mkdir -p test-results/linter
         flake8 src --count --exit-zero --max-complexity=10 --max-line-length=127 --select=E9,F63,F7 --show-source --statistics > test-results/linter/linter-results-${{matrix.python-version}}.txt
-   - name: Run flake8
-      run: |
-        flake8 > post_traces/flake8_results.txt 2>&1
-
     - name: Run pylint
       run: |
-        pylint src > post_traces/pylint_results.txt 2>&1
+      pylint src > post_traces/pylint_results.txt 2>&1
 
-    - name: Run pylint
-      run: |
-        pylint $(git ls-files '*.py')
+    - name: Upload Pylint results
+      uses: actions/upload-artifact@v4
+      with:
+          name: Pylint Results
+          path: post_traces/pylint_results.txt
         
     - name: Upload Linter results 
       uses: actions/upload-artifact@v4
