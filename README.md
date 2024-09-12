@@ -1,9 +1,8 @@
  ![GitHub Org's stars](https://img.shields.io/github/stars/SKS2024SE) ![Static Badge](https://img.shields.io/badge/License-MIT-green?style=flat) ![Static Badge](https://img.shields.io/badge/Language-Python-blue?style=flat&logo=python) ![Static Badge](https://img.shields.io/badge/Platform-Linux-green?style=flat&logo=linux)
 [![Github closes issues](https://img.shields.io/github/issues-closed-raw/SKS2024SE/SE_2024)](https://github.com/SKS2024SE/SE_2024/issues?q=is%3Aissue+is%3Aclosed)
 [![Github pull requests](https://img.shields.io/github/issues-pr/SKS2024SE/SE_2024)](https://github.com/SKS2024SE/SE_2024/pulls)
-[![Workflow Testing](https://github.com/SKS2024SE/SE_2024/actions/workflows/python-app.yml/badge.svg)](https://github.com/SKS2024SE/SE_2024/actions/workflows/python-app.yml)
+[![Workflow Testing](https://github.com/SKS2024SE/SE_2024/actions/workflows/python-app.yml/badge.svg)](https://github.com/SKS2024SE/SE_2024/actions/workflows/python-app.yml) ![Coverage Badge](https://github.com/SKS2024SE/SE_2024/raw/sanjaey/tests/coverage-badge.svg) ![autopep8](https://img.shields.io/badge/code%20style-autopep8-blue) ![flake8](https://img.shields.io/badge/lint-flake8-yellow) ![pylint](https://img.shields.io/badge/lint-pylint-brightgreen)
 
-![Coverage Badge](https://github.com/SKS2024SE/SE_2024/raw/sanjaey/tests/coverage-badge.svg)
 
 # Triad Triumph 
 [CSC 510 - Software Engineering 2024](https://txt.github.io/se24fall/index.html) <br>

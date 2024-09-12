@@ -3,6 +3,7 @@ Module is used to combine the results from the array."""
 
 from HW2.rand import random_array
 
+
 def recombine(left_arr, right_arr):
     """Module providing a function printing python version.
 Module is used to combine the results from the array."""
@@ -25,6 +26,7 @@ Module is used to combine the results from the array."""
         merge_arr[i + right_index] = left_arr[i]
 
     return merge_arr
+
 
 def merge_sort(arr_2):
     """This functions uses merge sort algorithm to sort the array."""
