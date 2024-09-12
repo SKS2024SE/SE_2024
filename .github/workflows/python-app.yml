@@ -45,7 +45,9 @@ jobs:
       with:
           name: Pylint Results
           path: post_traces/pylint_results.txt
+
   if: ${{ always() }}
+
     - name: Upload Linter results 
       uses: actions/upload-artifact@v4
       with:
