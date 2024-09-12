@@ -46,6 +46,7 @@ jobs:
     - name: Run pylint
       run: |
         pylint $(git ls-files '*.py')
+        
     - name: Upload Linter results 
       uses: actions/upload-artifact@v4
       with:
