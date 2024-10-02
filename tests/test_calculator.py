@@ -1,5 +1,10 @@
 # test_calculator.py
 #from calculator import add, subtract
+import sys
+import os
+
+# Add the src directory to the Python path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
 
 from HW1.simplepython import is_prime , squaresum , fact
 
