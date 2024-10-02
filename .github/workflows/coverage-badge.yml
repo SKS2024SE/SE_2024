@@ -25,5 +25,5 @@ jobs:
 
       - name: Run coverage badge script
         run: |
-          python /workspaces/SE_2024/tests/codecoverage.py  # Replace with the actual path
+          python tests/codecoverage.py  # Replace with the actual path
  
