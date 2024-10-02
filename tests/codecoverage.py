@@ -1,7 +1,7 @@
 import json
 
 # Path to your JSON file
-file_path = '/workspaces/SE_2024/coverage.json'
+file_path = '/workspaces/SE_2024/coverage'
 
 # Open and load the JSON data
 with open(file_path, 'r') as file:
