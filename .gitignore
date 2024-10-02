@@ -40,16 +40,16 @@ pip-delete-this-directory.txt
 htmlcov/
 .tox/
 .nox/
-.coverage
-.coverage.*
+#.coverage
+#.coverage.*
 .cache
 nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
+#coverage.xml
+#*.cover
+#*.py,cover
 .hypothesis/
 .pytest_cache/
-cover/
+#cover/
 
 # Translations
 *.mo
@@ -308,13 +308,13 @@ _TeamCity*
 !.axoCover/settings.json
 
 # Coverlet is a free, cross platform Code Coverage Tool
-coverage*.json
-coverage*.xml
-coverage*.info
+#coverage*.json
+#coverage*.xml
+#coverage*.info
 
 # Visual Studio code coverage results
-*.coverage
-*.coveragexml
+#*.coverage
+#*.coveragexml
 
 # NCrunch
 _NCrunch_*
