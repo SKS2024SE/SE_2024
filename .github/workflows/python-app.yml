@@ -31,6 +31,10 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+    - name: Install jq
+      run: sudo apt-get install jq
+      
     - name: Lint with flake8
       run: |
         mkdir -p test-results/linter
@@ -65,3 +69,22 @@ jobs:
         name: Pylint Results for ${{ matrix.python-version }}
         path: test-results/pylint/pylint-results-${{ matrix.python-version }}.txt
       if: ${{ always() }}
+
+    - name: Run pylint
+      id: pylint
+      run: |
+        pylint src --output-format=json > pylint-results.json
+        score=$(jq '. | map(.score) | add' pylint-results.json)
+        echo "Pylint Score: $score"
+        echo "::set-output name=score::$score"
+
+    - name: Create Pylint Badge URL
+      run: |
+        score=${{ steps.pylint.outputs.score }}
+        echo "Pylint Badge: https://img.shields.io/badge/pylint-$score-$(if [ "$score" -ge 8 ]; then echo 'green'; else echo 'red'; fi)" > pylint-badge.txt
+
+    - name: Upload Pylint Badge URL
+      uses: actions/upload-artifact@v4
+      with:
+        name: Pylint Badge
+        path: pylint-badge.txt
