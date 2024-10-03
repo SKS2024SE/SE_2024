@@ -1,17 +1,24 @@
+"""This file is to generate a Pylint badge"""
 import os
 import re
 
-def extract_pylint_score_from_file(file_path):
-    """Extract the Pylint score from a given file."""
-    with open(file_path, 'r', encoding='utf-8') as file:
-        content = file.read()
-        
-    match = re.search(r'rated at (\d+\.\d+)/10', content)
-    if match:
-        return round(float(match.group(1)))
-    return 0
+# Path to the Pylint report file
+pylint_report_file = os.path.abspath('../post_traces/pylint_results.txt')
 
-def generate_pylint_badge(score, badge_path="pylint-badge.svg"):
+# Read the Pylint report file
+with open(pylint_report_file, 'r', encoding='utf-8') as file:
+    pylint_output = file.read()
+
+# Extract the Pylint score using regex
+match = re.search(r'rated at (\d+\.\d+)/10', pylint_output)
+if match:
+    pylint_score = round(float(match.group(1)))  # Round the score to the nearest integer
+else:
+    pylint_score = 0  # Default score if not found
+
+print(f"Pylint Score: {pylint_score}/10")
+
+def generate_badge(score, badge_path="pylint-badge.svg"):
     """Generate an SVG badge indicating the Pylint score.
 
     Args:
@@ -42,8 +49,8 @@ def generate_pylint_badge(score, badge_path="pylint-badge.svg"):
     <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="11">
         <text x="23" y="15" fill="#010101" fill-opacity="0">Pylint</text>
         <text x="23" y="14">Pylint</text>
-        <text x="77" y="15" fill="#010101" fill-opacity="0">{score}</text>
-        <text x="77" y="14">{score}</text>
+        <text x="77" y="15" fill="#010101" fill-opacity="0">{score}/10</text>
+        <text x="77" y="14">{score}/10</text>
     </g>
 </svg>
 """
@@ -53,16 +60,8 @@ def generate_pylint_badge(score, badge_path="pylint-badge.svg"):
     with open(badge_path, "w", encoding='utf-8') as badge_file:
         badge_file.write(svg)
 
-def main(pylint_report_file):
-    """Main function to extract score from file and generate the badge."""
-    score = extract_pylint_score_from_file(pylint_report_file)
-    print(f"Extracted Pylint Score: {score}")
-    
-    badge_file_path = os.path.abspath("pylint-badge.svg")
-    generate_pylint_badge(score, badge_file_path)
+# Path where the badge will be saved
+badge_file_path = os.path.abspath("pylint-badge.svg")
 
-if __name__ == "__main__":
-    # Specify the path to your Pylint report file
-    pylint_report_file = os.path.abspath('/workspaces/SE_2024/post_traces/pylint_results.txt')
- # Update this path
-    main(pylint_report_file)
+# Generate the badge
+generate_badge(pylint_score, badge_file_path)
