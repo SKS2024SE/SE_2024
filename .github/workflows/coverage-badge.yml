@@ -26,4 +26,8 @@ jobs:
       - name: Run coverage badge script
         run: |
           python tests/codecoverage.py  # Replace with the actual path
+
+      - name: Run pylint badge script
+        run: |
+          python tests/pylint-badge.py  # Replace with the actual path
  
