@@ -1,4 +1,4 @@
-name: TT Python CI
+name: Pylint-Testing
 
 on:
   push:
@@ -41,18 +41,18 @@ jobs:
         echo "Pylint score::$pylint_score" >> $GITHUB_ENV
         pylint src > test-results/pylint/pylint-results-${{ matrix.python-version }}.txt
 
-    - name: Generate Pylint Badge
-      run: |
-        score=${{ env.Pylint_score }}
-        color="green"
-        if (( $(echo "$score < 8.0" | bc -l) )); then
-          color="red"
-        elif (( $(echo "$score < 9.0" | bc -l) )); then
-          color="yellow"
-        fi
-        echo "Creating badge..."
-        curl -o pylint-badge-${{ matrix.python-version }}.svg "https://img.shields.io/badge/pylint-${score}-${color}.svg"
-
+        - name: Generate Pylint Badge
+        run: |
+          score=${{ env.Pylint_score }}
+          color="green"
+          if (( $(echo "$score < 8.0" | bc -l) )); then
+            color="red"
+          elif (( $(echo "$score < 9.0" | bc -l) )); then
+            color="yellow"
+          fi
+          echo "Creating badge..."
+          curl -o pylint-badge-${{ matrix.python-version }}.svg "https://img.shields.io/badge/pylint-${score}-${color}.svg"
+      
     - name: Run autopep8
       run: |
           find src -name '*.py' -exec autopep8 --in-place --aggressive --aggressive {} +
