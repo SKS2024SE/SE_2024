@@ -27,7 +27,11 @@ jobs:
         run: |
           python tests/codecoverage.py  # Replace with the actual path
 
-      - name: Run pylint badge script
+      - name: Run Pylint
         run: |
-          python tests/pylint-badge.py  # Replace with the actual path
+          pylint src > post_traces/pylint_results.txt  # Ensure this runs correctly
+
+      - name: Generate Pylint Badge
+        run: |
+          python3 tests/pylint-badge.py  # Ensure the script is correctly set up to find the file
  
