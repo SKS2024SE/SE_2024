@@ -61,3 +61,4 @@ badge_file_path = os.path.abspath("tests/coverage-badge.svg")
 
 # Generate the badge
 generate_badge(total_coverage, badge_file_path)
+
