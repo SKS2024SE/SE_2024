@@ -1,7 +1,7 @@
 """Module providing a function printing python version.
 Module is used to combine the results from the array."""
 
-from HW2.rand import random_array
+from hw2.rand import random_array # pylint: disable=E0401
 
 
 def recombine(left_arr, right_arr):
