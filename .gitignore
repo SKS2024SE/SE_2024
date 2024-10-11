@@ -561,3 +561,7 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+src/hw4/__MACOSX
+
+.*
